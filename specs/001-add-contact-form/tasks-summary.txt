@@ -1,0 +1,13 @@
+I have generated the `tasks.md` file for the "Add Contact Form" feature.
+
+**Summary:**
+-   **Total task count**: 10
+-   **Task count per user story**:
+    -   User Story 1: 4
+-   **Parallel opportunities identified**: 2 tasks can be run in parallel.
+-   **Independent test criteria for each story**:
+    -   User Story 1: A user can navigate to the contact page, fill out the form, and submit it to receive a success message.
+-   **Suggested MVP scope**:
+    -   Complete User Story 1.
+
+The `tasks.md` file is located at `specs/001-add-contact-form/tasks.md`.

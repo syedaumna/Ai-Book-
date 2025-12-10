@@ -1,0 +1,15 @@
+# Ignore common development files and directories
+node_modules/
+.docusaurus/
+build/
+src/
+docs/
+blog/
+static/
+.git/
+.gitignore
+package-lock.json
+yarn.lock
+npm-debug.log*
+yarn-debug.log*
+.env*
