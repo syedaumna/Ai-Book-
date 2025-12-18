@@ -62,7 +62,7 @@ const sidebars: SidebarsConfig = {
         // 'The Physical Human Robotic AI/Chapter-5', // Placeholder
       ],
     },
-    'intro', // Keep existing intro, but it might be deleted later
+    , // Keep existing intro, but it might be deleted later
   ],
 
   // But you can create a sidebar manually
