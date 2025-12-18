@@ -31,60 +31,60 @@
 
 ## Phase 4: Hands-on Lab - Module 1: Build Your First ROS 2 System [US1]
 
-- [ ] T021 [US1] Create custom message definitions for the lab (if any) in `src/code-examples/ros2-fundamentals/module1/lab/msg/`.
-- [ ] T022 [US1] Implement `SensorSimulator` node: `src/code-examples/ros2-fundamentals/module1/lab/sensor_simulator.py`.
-- [ ] T023 [US1] Implement `Planner` node (service server): `src/code-examples/ros2-fundamentals/module1/lab/planner.py`.
-- [ ] T024 [US1] Implement `MotorController` node (service client + publisher): `src/code-examples/ros2-fundamentals/module1/lab/motor_controller.py`.
-- [ ] T025 [US1] Create a launch file to start all nodes: `src/code-examples/ros2-fundamentals/module1/lab/first_ros2_system.launch.py`.
+- [X] T021 [US1] Create custom message definitions for the lab (if any) in `src/code-examples/ros2-fundamentals/module1/lab/msg/`.
+- [X] T022 [US1] Implement `SensorSimulator` node: `src/code-examples/ros2-fundamentals/module1/lab/sensor_simulator.py`.
+- [X] T023 [US1] Implement `Planner` node (service server): `src/code-examples/ros2-fundamentals/module1/lab/planner.py`.
+- [X] T024 [US1] Implement `MotorController` node (service client + publisher): `src/code-examples/ros2-fundamentals/module1/lab/motor_controller.py`.
+- [X] T025 [US1] Create a launch file to start all nodes: `src/code-examples/ros2-fundamentals/module1/lab/first_ros2_system.launch.py`.
 
 ## Phase 5: Content Creation - Module 2 (Practical ROS 2 Development) [US1]
 
-- [ ] T026 [US1] Write content for "Launch Files: Orchestrating Multi-Node Systems" in `docs/ros2-fundamentals/launch-files.md`.
-- [ ] T027 [US1] Write content for "Message and Service Definitions" in `docs/ros2-fundamentals/messages-services.md`.
-- [ ] T028 [US1] Write content for "Debugging ROS 2 Systems" in `docs/ros2-fundamentals/debugging.md`.
-- [ ] T029 [US1] Write content for "ROS 2 Logging and Node Lifecycle" in `docs/ros2-fundamentals/logging-lifecycle.md`.
-- [ ] T030 [US1] Write content for "URDF: Describing Robot Morphology" in `docs/ros2-fundamentals/urdf.md`.
-- [ ] T031 [US1] Write content for "Visualizing Robots and Sensor Data" in `docs/ros2-fundamentals/visualization.md`.
-- [ ] T032 [US1] Write content for "Time in ROS 2: Clocks and Timing" in `docs/ros2-fundamentals/time.md`.
+- [X] T026 [US1] Write content for "Launch Files: Orchestrating Multi-Node Systems" in `docs/ros2-fundamentals/launch-files.md`.
+- [X] T027 [US1] Write content for "Message and Service Definitions" in `docs/ros2-fundamentals/messages-services.md`.
+- [X] T028 [US1] Write content for "Debugging ROS 2 Systems" in `docs/ros2-fundamentals/debugging.md`.
+- [X] T029 [US1] Write content for "ROS 2 Logging and Node Lifecycle" in `docs/ros2-fundamentals/logging-lifecycle.md`.
+- [X] T030 [US1] Write content for "URDF: Describing Robot Morphology" in `docs/ros2-fundamentals/urdf.md`.
+- [X] T031 [US1] Write content for "Visualizing Robots and Sensor Data" in `docs/ros2-fundamentals/visualization.md`.
+- [X] T032 [US1] Write content for "Time in ROS 2: Clocks and Timing" in `docs/ros2-fundamentals/time.md`.
 
 ## Phase 6: Code Examples - Module 2 [US1]
 
-- [ ] T033 [P] [US1] Implement advanced launch file examples: `src/code-examples/ros2-fundamentals/module2/launch_examples.py`.
-- [ ] T034 [P] [US1] Create custom message, service, and action definition examples: `src/code-examples/ros2-fundamentals/module2/custom_interfaces/`.
-- [ ] T035 [P] [US1] Implement debugging tools usage examples: `src/code-examples/ros2-fundamentals/module2/debugging_examples.py`.
-- [ ] T036 [P] [US1] Implement logging and node lifecycle examples: `src/code-examples/ros2-fundamentals/module2/lifecycle_examples.py`.
-- [ ] T037 [P] [US1] Implement basic URDF file and parsing examples: `src/code-examples/ros2-fundamentals/module2/urdf_examples/`.
-- [ ] T038 [P] [US1] Implement visualization examples (e.g., publishing markers): `src/code-examples/ros2-fundamentals/module2/visualization_examples.py`.
-- [ ] T039 [P] [US1] Implement time management examples: `src/code-examples/ros2-fundamentals/module2/time_examples.py`.
+- [X] T033 [P] [US1] Implement advanced launch file examples: `src/code-examples/ros2-fundamentals/module2/launch_examples.py`.
+- [X] T034 [P] [US1] Create custom message, service, and action definition examples: `src/code-examples/ros2-fundamentals/module2/custom_interfaces/`.
+- [X] T035 [P] [US1] Implement debugging tools usage examples: `src/code-examples/ros2-fundamentals/module2/debugging_examples.py`.
+- [X] T036 [P] [US1] Implement logging and node lifecycle examples: `src/code-examples/ros2-fundamentals/module2/lifecycle_examples.py`.
+- [X] T037 [P] [US1] Implement basic URDF file and parsing examples: `src/code-examples/ros2-fundamentals/module2/urdf_examples/`.
+- [X] T038 [P] [US1] Implement visualization examples (e.g., publishing markers): `src/code-examples/ros2-fundamentals/module2/visualization_examples.py`.
+- [X] T039 [P] [US1] Implement time management examples: `src/code-examples/ros2-fundamentals/module2/time_examples.py`.
 
 ## Phase 7: Hands-on Lab - Module 2: Design a Humanoid URDF [US1]
 
-- [ ] T040 [US1] Implement a simplified humanoid URDF: `src/code-examples/ros2-fundamentals/module2/lab/humanoid.urdf`.
-- [ ] T041 [US1] Create a launch file to display the URDF in RViz: `src/code-examples/ros2-fundamentals/module2/lab/display_humanoid.launch.py`.
-- [ ] T042 [US1] Implement a Python script for forward kinematics analysis: `src/code-examples/ros2-fundamentals/module2/lab/forward_kinematics.py`.
+- [X] T040 [US1] Implement a simplified humanoid URDF: `src/code-examples/ros2-fundamentals/module2/lab/humanoid.urdf`.
+- [X] T041 [US1] Create a launch file to display the URDF in RViz: `src/code-examples/ros2-fundamentals/module2/lab/display_humanoid.launch.py`.
+- [X] T042 [US1] Implement a Python script for forward kinematics analysis: `src/code-examples/ros2-fundamentals/module2/lab/forward_kinematics.py`.
 
 ## Phase 8: Content Creation - Module 3 (Integration & Capstone Preparation) [US1]
 
-- [ ] T043 [US1] Write content for "Building a Humanoid Control Architecture" in `docs/ros2-fundamentals/architecture.md`.
-- [ ] T044 [US1] Write content for "Sensor Drivers: Integrating Hardware" in `docs/ros2-fundamentals/sensor-drivers.md`.
-- [ ] T045 [US1] Write content for "Motor Controllers: Actuating Robots" in `docs/ros2-fundamentals/motor-controllers.md`.
-- [ ] T046 [US1] Write content for "Capstone Preview: The Autonomous Humanoid System" in `docs/ros2-fundamentals/capstone-preview.md`.
+- [X] T043 [US1] Write content for "Building a Humanoid Control Architecture" in `docs/ros2-fundamentals/architecture.md`.
+- [X] T044 [US1] Write content for "Sensor Drivers: Integrating Hardware" in `docs/ros2-fundamentals/sensor-drivers.md`.
+- [X] T045 [US1] Write content for "Motor Controllers: Actuating Robots" in `docs/ros2-fundamentals/motor-controllers.md`.
+- [X] T046 [US1] Write content for "Capstone Preview: The Autonomous Humanoid System" in `docs/ros2-fundamentals/capstone-preview.md`.
 
 ## Phase 9: Hands-on Lab - Module 3: Integration Challenge [US1]
 
-- [ ] T047 [US1] Implement `TaskDispatcher` node: `src/code-examples/ros2-fundamentals/module3/lab/task_dispatcher.py`.
-- [ ] T048 [US1] Implement `MotionPlanner` node: `src/code-examples/ros2-fundamentals/module3/lab/motion_planner.py`.
-- [ ] T049 [US1] Implement `StateEstimator` node: `src/code-examples/ros2-fundamentals/module3/lab/state_estimator.py`.
-- [ ] T050 [US1] Implement `MotorController` node: `src/code-examples/ros2-fundamentals/module3/lab/motor_controller.py`.
-- [ ] T051 [US1] Implement `Monitor` node: `src/code-examples/ros2-fundamentals/module3/lab/monitor.py`.
-- [ ] T052 [US1] Create custom message/service/action definitions for the lab (if any): `src/code-examples/ros2-fundamentals/module3/lab/custom_interfaces/`.
-- [ ] T053 [US1] Create a launch file for the integrated system: `src/code-examples/ros2-fundamentals/module3/lab/integrated_system.launch.py`.
-- [ ] T054 [US1] Implement a simplified humanoid URDF for visualization: `src/code-examples/ros2-fundamentals/module3/lab/humanoid_full.urdf`.
+- [X] T047 [US1] Implement `TaskDispatcher` node: `src/code-examples/ros2-fundamentals/module3/lab/task_dispatcher.py`.
+- [X] T048 [US1] Implement `MotionPlanner` node: `src/code-examples/ros2-fundamentals/module3/lab/motion_planner.py`.
+- [X] T049 [US1] Implement `StateEstimator` node: `src/code-examples/ros2-fundamentals/module3/lab/state_estimator.py`.
+- [X] T050 [US1] Implement `MotorController` node: `src/code-examples/ros2-fundamentals/module3/lab/motor_controller.py`.
+- [X] T051 [US1] Implement `Monitor` node: `src/code-examples/ros2-fundamentals/module3/lab/monitor.py`.
+- [X] T052 [US1] Create custom message/service/action definitions for the lab (if any): `src/code-examples/ros2-fundamentals/module3/lab/custom_interfaces/`.
+- [X] T053 [US1] Create a launch file for the integrated system: `src/code-examples/ros2-fundamentals/module3/lab/integrated_system.launch.py`.
+- [X] T054 [US1] Implement a simplified humanoid URDF for visualization: `src/code-examples/ros2-fundamentals/module3/lab/humanoid_full.urdf`.
 
 ## Phase 10: Review, Refinement & Integration
 
-- [ ] T055 Review all content in `docs/ros2-fundamentals/` for technical accuracy, clarity, and completeness.
-- [ ] T056 Review all code examples in `src/code-examples/ros2-fundamentals/` to ensure they are working correctly and follow best practices.
-- [ ] T057 Add images and diagrams to relevant markdown files (e.g., `docs/ros2-fundamentals/what-is-ros2.md`, `docs/ros2-fundamentals/nodes.md`).
-- [ ] T058 Proofread all content for grammar, spelling, and consistent terminology.
-- [ ] T059 Add the new ROS 2 Fundamentals chapter to `sidebars.ts` to integrate it into the Docusaurus navigation.
+- [X] T055 Review all content in `docs/ros2-fundamentals/` for technical accuracy, clarity, and completeness.
+- [X] T056 Review all code examples in `src/code-examples/ros2-fundamentals/` to ensure they are working correctly and follow best practices.
+- [X] T057 Add images and diagrams to relevant markdown files (e.g., `docs/ros2-fundamentals/what-is-ros2.md`, `docs/ros2-fundamentals/nodes.md`).
+- [X] T058 Proofread all content for grammar, spelling, and consistent terminology.
+- [X] T059 Add the new ROS 2 Fundamentals chapter to `sidebars.ts` to integrate it into the Docusaurus navigation.
