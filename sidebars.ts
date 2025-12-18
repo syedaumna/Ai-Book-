@@ -26,6 +26,7 @@ const sidebars: SidebarsConfig = {
         slug: '/the-physical-human-robotic-ai',
       },
       items: [
+        'The Physical Human Robotic AI/index',
         {
           type: 'category',
           label: 'Chapter-2: ROS 2 Fundamentals',
