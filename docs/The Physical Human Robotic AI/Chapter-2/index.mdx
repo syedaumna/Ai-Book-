@@ -1,0 +1,57 @@
+# ROS 2 Fundamentals
+
+Welcome to Chapter 2: The Robotic Nervous System: ROS 2 Fundamentals!
+
+This chapter introduces Robot Operating System 2 (ROS 2) as the middleware layer that connects sensors, perception algorithms, planners, and motor controllers. You will learn ROS 2 architecture, core concepts (nodes, topics, services, actions), and practical implementation. By the end, you will design and build a multi-node ROS 2 system that simulates a humanoid robot's control pipeline.
+
+## Learning Outcomes
+
+Upon completion of this chapter, you will be able to:
+
+### Conceptual
+
+- Understand ROS 2 architecture and why middleware is essential for robotics.
+- Grasp the difference between topics (streams), services (RPC), and actions (goals).
+- Understand the publish-subscribe pattern and its advantages for distributed systems.
+- Learn why ROS 2 is superior to ROS 1 for real-time and deterministic systems.
+- Understand URDF (Unified Robot Description Format) and kinematic chains.
+- Learn how to describe humanoid robot morphology in machine-readable format.
+
+### Practical
+
+- Install and configure a ROS 2 environment.
+- Create ROS 2 packages with proper structure and dependencies.
+- Write ROS 2 nodes.
+- Create custom message and service definitions.
+- Implement publish-subscribe communication between nodes.
+- Implement request-response (service) communication.
+- Use launch files to orchestrate multi-node systems.
+- Use parameter servers and dynamic parameter reconfiguration.
+- Parse and validate URDF files for humanoid robots.
+- Visualize robot morphology using a visualization tool.
+- Debug ROS 2 systems using command-line tools.
+
+## Capstone Relevance
+
+The concepts and skills learned in this chapter are directly applicable to your capstone project:
+
+- You will use ROS 2 nodes to coordinate your capstone system.
+- The perception pipeline (sensors → fusion) will run as ROS 2 nodes.
+- Motion planning will be a ROS 2 service.
+- Motor commands will be published as ROS 2 topics.
+
+## Modules
+
+This chapter is divided into three main modules:
+
+### Module 1: ROS 2 Architecture & Core Concepts
+
+This module introduces the fundamental building blocks of ROS 2, including nodes, topics, services, actions, and parameters. You will learn how these components interact to form a distributed robotic system.
+
+### Module 2: Practical ROS 2 Development
+
+This module dives into practical aspects of ROS 2 development, covering launch files for system orchestration, custom message and service definitions, debugging techniques, logging, node lifecycles, and the Unified Robot Description Format (URDF).
+
+### Module 3: Integration & Capstone Preparation
+
+The final module focuses on integrating various ROS 2 components and preparing for your capstone project. You will explore humanoid control architectures, sensor drivers, motor controllers, and tackle a comprehensive integration challenge.
