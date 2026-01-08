@@ -1,60 +1,66 @@
-# Quickstart Guide for Implement ROS 2 Fundamentals Feature
+# Quickstart Guide: Setting Up Your ROS 2 Development Environment
 
-This guide provides a quick setup for the ROS 2 environment and demonstrates a minimal "Hello World" ROS 2 node, which will serve as a foundation for the examples in this chapter.
+This guide provides essential steps for setting up a ROS 2 development environment and introduces you to creating and running your first ROS 2 nodes. This foundation is crucial for following the examples and labs throughout the "ROS 2 Fundamentals" chapter.
 
 ## 1. ROS 2 Environment Setup
 
-It is assumed that you are running a Linux-based operating system (preferably Ubuntu 22.04 LTS) suitable for ROS 2 Humble or Iron distribution.
+This chapter assumes you are working within a **Linux-based operating system**, specifically **Ubuntu 22.04 LTS**, which is the recommended platform for ROS 2 Humble and Iron distributions.
 
 ### 1.1 Install ROS 2
 
-Follow the official ROS 2 documentation for installing either **ROS 2 Humble Hawksbill** or **ROS 2 Iron Irwini**:
+If you haven't already, please follow the comprehensive installation instructions provided in the official ROS 2 documentation. It is generally recommended to install the "Desktop Install" which includes the core ROS 2 packages, RViz (for visualization), and other essential development tools.
 
--   **ROS 2 Humble**: [https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)
--   **ROS 2 Iron**: [https://docs.ros.org/en/iron/Installation/Ubuntu-Install-Debians.html](https://docs.ros.org/en/iron/Installation/Ubuntu-Install-Debians.html)
+-   **ROS 2 Humble Hawksbill (LTS)**: [https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)
+-   **ROS 2 Iron Irwini**: [https://docs.ros.org/en/iron/Installation/Ubuntu-Install-Debians.html](https://docs.ros.org/en/iron/Installation/Ubuntu-Install-Debians.html)
 
-Make sure to install the "Desktop Install" which includes ROS, RViz, and other useful tools.
+### 1.2 Source Your ROS 2 Environment
 
-### 1.2 Source the ROS 2 Environment
-
-After installation, you need to source the ROS 2 setup file in every new terminal you open to use ROS 2 commands:
+After installation, you **must** source the ROS 2 setup file in **every new terminal session** before you can use any ROS 2 commands.
 
 ```bash
-source /opt/ros/humble/setup.bash # For Humble
+source /opt/ros/humble/setup.bash # If you installed ROS 2 Humble
 # OR
-source /opt/ros/iron/setup.bash   # For Iron
+source /opt/ros/iron/setup.bash   # If you installed ROS 2 Iron
 ```
 
-For convenience, you can add this line to your `~/.bashrc` file:
+**Tip**: To avoid typing this command every time, you can add it to your `~/.bashrc` file:
 
 ```bash
-echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
-source ~/.bashrc
+echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc # For Humble
+# OR
+echo "source /opt/ros/iron/setup.bash" >> ~/.bashrc   # For Iron
+
+source ~/.bashrc # Apply the changes
 ```
 
-## 2. Create Your First ROS 2 Package
+## 2. Create and Build Your First ROS 2 Package
 
-All ROS 2 development is done within packages. Let's create a new package for our "Hello World" example.
+All ROS 2 software components are organized into **packages**. A package is a directory that contains source code, message definitions, launch files, and other resources.
+
+### 2.1 Create a ROS 2 Workspace
+
+A **workspace** is a directory where you develop and build your ROS 2 packages.
 
 ```bash
-# Navigate to your ROS 2 workspace (e.g., ~/ros2_ws/src)
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
-
-# Create a new Python package
-ros2 pkg create --build-type ament_python my_ros2_package
 ```
 
-## 3. Minimal "Hello World" ROS 2 Node (Python)
+### 2.2 Create a New Python Package
 
-Inside your `my_ros2_package`, let's create a simple Python node that prints "Hello World".
+We'll create a new Python package named `ros2_fundamentals_examples` to house the code examples for this chapter.
 
-### 3.1 Create the Python Script
+```bash
+ros2 pkg create --build-type ament_python ros2_fundamentals_examples
+```
 
-Create a file named `minimal_publisher.py` inside `~/ros2_ws/src/my_ros2_package/my_ros2_package/` (note the nested directory with the same name as the package).
+### 2.3 Add a Minimal Python Node
+
+Navigate into your new package and create a simple "Hello World" publisher node.
+Create a file named `minimal_publisher.py` inside `~/ros2_ws/src/ros2_fundamentals_examples/ros2_fundamentals_examples/`.
 
 ```python
-# minimal_publisher.py
+# ~/ros2_ws/src/ros2_fundamentals_examples/ros2_fundamentals_examples/minimal_publisher.py
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
@@ -69,7 +75,7 @@ class MinimalPublisher(Node):
 
     def timer_callback(self):
         msg = String()
-        msg.data = 'Hello World: %d' % self.i
+        msg.data = 'Hello ROS 2 World: %d' % self.i
         self.publisher_.publish(msg)
         self.get_logger().info('Publishing: "%s"' % msg.data)
         self.i += 1
@@ -85,40 +91,40 @@ if __name__ == '__main__':
     main()
 ```
 
-### 3.2 Make the Script Executable
+### 2.4 Make the Script Executable and Define Entry Point
+
+First, make your Python script executable:
 
 ```bash
-chmod +x ~/ros2_ws/src/my_ros2_package/my_ros2_package/minimal_publisher.py
+chmod +x ~/ros2_ws/src/ros2_fundamentals_examples/ros2_fundamentals_examples/minimal_publisher.py
 ```
 
-### 3.3 Add Entry Point in `setup.py`
-
-Edit `~/ros2_ws/src/my_ros2_package/setup.py` and add the following inside the `entry_points` dictionary:
+Next, open the `~/ros2_ws/src/ros2_fundamentals_examples/setup.py` file and add the following entry point to the `entry_points` dictionary. This allows `ros2 run` to find and execute your node.
 
 ```python
     entry_points={
         'console_scripts': [
-            'minimal_publisher = my_ros2_package.minimal_publisher:main',
+            'minimal_publisher = ros2_fundamentals_examples.minimal_publisher:main',
         ],
     },
 ```
 
-### 3.4 Build Your Package
+### 2.5 Build Your ROS 2 Workspace
 
-Navigate back to your workspace root and build:
+Navigate back to your workspace root and build your package using `colcon build`:
 
 ```bash
 cd ~/ros2_ws/
-colcon build
+colcon build --packages-select ros2_fundamentals_examples
 ```
 
-### 3.5 Run Your Node
+### 2.6 Source and Run Your Node
 
-Source your workspace and run the node:
+After building, you must source your workspace's `install/setup.bash` file. This makes your newly built package visible to ROS 2.
 
 ```bash
-source install/setup.bash
-ros2 run my_ros2_package minimal_publisher
+source install/setup.bash # From ~/ros2_ws/
+ros2 run ros2_fundamentals_examples minimal_publisher
 ```
 
-You should see "Publishing: 'Hello World: X'" messages in your terminal.
+You should now see your node publishing "Hello ROS 2 World" messages to the console. Congratulations, you've created and run your first ROS 2 node!

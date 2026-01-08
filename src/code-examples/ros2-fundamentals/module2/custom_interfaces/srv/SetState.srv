@@ -1,0 +1,5 @@
+# SetState.srv
+string target_state
+---
+bool success
+string message
